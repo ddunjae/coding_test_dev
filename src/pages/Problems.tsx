@@ -18,6 +18,10 @@ const Problems: React.FC = () => {
     dispatch(setFilters({ ...filters, [type]: value }));
   };
 
+  const handleProblemClick = (problemId: number) => {
+    navigate(`/problems/${problemId}`);
+  };
+
   const filteredProblems = problems.filter((problem) => {
     if (filters.category && problem.category !== filters.category) return false;
     if (filters.difficulty && problem.difficulty !== filters.difficulty) return false;
@@ -89,7 +93,7 @@ const Problems: React.FC = () => {
                 <tr
                   key={problem.id}
                   className="hover:bg-gray-50 cursor-pointer"
-                  onClick={() => navigate(`/problems/${problem.id}`)}
+                  onClick={() => handleProblemClick(problem.id)}
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="w-2 h-2 rounded-full bg-gray-300"></div>

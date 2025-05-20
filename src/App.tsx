@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import Home from './pages/Home';
 import Problems from './pages/Problems';
+import ProblemDetail from './pages/ProblemDetail';
 import Submissions from './pages/Submissions';
 
 const App: React.FC = () => {
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/problems" element={<Problems />} />
+          <Route path="/problems/:id" element={<ProblemDetail />} />
           <Route path="/submissions" element={<Submissions />} />
         </Routes>
       </Router>
