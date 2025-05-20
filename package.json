@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
